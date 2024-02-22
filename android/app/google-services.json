@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "75596502552",
+    "project_id": "arora-74805",
+    "storage_bucket": "arora-74805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75596502552:android:99ecf551d71045b58c556d",
+        "android_client_info": {
+          "package_name": "com.arora"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8__BEc5HAJUOkyLzUJqggmuNxx8N5c0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
