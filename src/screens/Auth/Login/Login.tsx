@@ -17,8 +17,8 @@ import {ToastError} from '../../../utils/ToastMessage';
 
 export default function LoginScreen() {
   const navigation: any = useNavigation();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState(__DEV__ ? 'test@test.com' : "");
+  const [password, setPassword] = useState(__DEV__ ? 'test1234' : "");
   const [emailError, setEmailError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -135,7 +135,6 @@ export default function LoginScreen() {
                 }}
                 autoCapitalize="none"
                 secureTextEntry={!showPassword}
-                placeholder="password"
                 value={password}
                 onChangeText={value => setPassword(value)}
               />

@@ -4,8 +4,13 @@ import {
   RefreshControl,
   ScrollView,
   BackHandler,
+  View,
+  TouchableOpacity,
+  Text,
 } from 'react-native';
 import {WebView} from 'react-native-webview';
+import {auth} from '../../../config/firebase';
+import {signOut} from 'firebase/auth';
 
 const App = () => {
   const [refresherEnabled, setEnableRefresher] = useState(true);
@@ -49,8 +54,13 @@ const App = () => {
             }}
           />
         }>
+        <View>
+          <TouchableOpacity onPress={() => signOut(auth)}>
+            <Text>ÇIKIŞ</Text>
+          </TouchableOpacity>
+        </View>
         <WebView
-          source={{uri: "https://www.acikrotaturizmrehberleri.com/"}}
+          source={{uri: 'https://www.acikrotaturizmrehberleri.com/'}}
           onLoadProgress={event => setCanGoBack(event.nativeEvent.canGoBack)}
           ref={webViewRef}
           originWhitelist={['*']}
