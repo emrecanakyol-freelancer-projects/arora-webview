@@ -11,6 +11,7 @@ import {
 import {WebView} from 'react-native-webview';
 import {auth} from '../../../config/firebase';
 import {signOut} from 'firebase/auth';
+import Header from '../../components/Header';
 
 const App = () => {
   const [refresherEnabled, setEnableRefresher] = useState(true);
@@ -54,11 +55,7 @@ const App = () => {
             }}
           />
         }>
-        <View>
-          <TouchableOpacity onPress={() => signOut(auth)}>
-            <Text>ÇIKIŞ</Text>
-          </TouchableOpacity>
-        </View>
+        <Header />
         <WebView
           source={{uri: 'https://www.acikrotaturizmrehberleri.com/'}}
           onLoadProgress={event => setCanGoBack(event.nativeEvent.canGoBack)}
