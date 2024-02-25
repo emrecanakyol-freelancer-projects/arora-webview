@@ -17,7 +17,7 @@ import { auth } from '../../config/firebase';
 import useAuth from '../../hooks/useAuth';
 
 const CustomDrawer = (props: any) => {
-    const {user} = useAuth();
+    const {user}:any = useAuth();
 
   const handleSignOut = async () => {
     try {
@@ -31,7 +31,7 @@ const CustomDrawer = (props: any) => {
     <View style={{flex: 1}}>
       <DrawerContentScrollView
         {...props}
-        contentContainerStyle={{backgroundColor: '#20222C'}}>
+        contentContainerStyle={{backgroundColor: 'green'}}>
         <View
           style={{
             alignItems: 'center',
@@ -49,26 +49,26 @@ const CustomDrawer = (props: any) => {
           <Text
             style={{
               color: '#fff',
-              fontSize: 12,
+              fontSize: 16,
               fontWeight: '600',
               width: 250,
               textAlign: 'center',
               marginTop: 2,
             }}>
-            Welcome
+            Hoşgeldiniz
           </Text>
-        {/* <Text
+        <Text
           numberOfLines={1}
           ellipsizeMode="tail"
           style={{
             color: '#fff',
-            fontWeight: '400',
+            fontWeight: '600',
             fontSize: 14,
             maxWidth: 235,
             marginTop: 10,
           }}>
-          {displayName}
-        </Text> */}
+          {user?.email}
+        </Text>
         </View>
         <View style={{flex: 1, backgroundColor: '#fff', paddingTop: 10}}>
           <DrawerItemList {...props} />
@@ -83,14 +83,14 @@ const CustomDrawer = (props: any) => {
           gap: 20,
           marginBottom: 20,
         }}>
-        <TouchableOpacity onPress={handleSignOut}>
+        <TouchableOpacity onPress={handleSignOut} style={{flexDirection: "row", alignItems: "center",}}>
           <Text
             style={{
               fontWeight: '600',
               color: "red",
-              fontSize: 12,
+              fontSize: 16,
             }}>
-            Logout
+            Çıkış Yap
           </Text>
         </TouchableOpacity>
       </View>

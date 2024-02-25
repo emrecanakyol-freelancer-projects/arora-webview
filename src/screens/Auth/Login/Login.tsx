@@ -17,7 +17,7 @@ import {ToastError} from '../../../utils/ToastMessage';
 
 export default function LoginScreen() {
   const navigation: any = useNavigation();
-  const [email, setEmail] = useState(__DEV__ ? 'test@test.com' : "");
+  const [email, setEmail] = useState(__DEV__ ? 'test2@gmail.com' : "");
   const [password, setPassword] = useState(__DEV__ ? 'test1234' : "");
   const [emailError, setEmailError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
