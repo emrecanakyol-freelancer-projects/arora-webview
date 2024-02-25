@@ -4,6 +4,13 @@ import Home from '../screens/Home/Home';
 import CDrawerContent from '../components/CDrawerContent';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Account from '../screens/Account/Account';
+import Turizm from '../screens/Turizm/Turizm';
+import About from '../screens/About/About';
+import Team from '../screens/Team/Team';
+import Blog from '../screens/Blog/Blog';
+import Support from '../screens/Support/Support';
+import Travels from '../screens/Travels/Travels';
+import Camping from '../screens/Camping/Camping';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -27,8 +34,8 @@ function DrawerNavigation() {
         }}
       />
       <Drawer.Screen
-        name="Rehberliği Bölümü"
-        component={Home}
+        name="Turizm Rehberliği Bölümü"
+        component={Turizm}
         options={{
           drawerIcon: () => (
             <Ionicons name="accessibility-outline" size={20} color="black" />
@@ -37,7 +44,7 @@ function DrawerNavigation() {
       />
       <Drawer.Screen
         name="Hakkımızda"
-        component={Home}
+        component={About}
         options={{
           drawerIcon: () => (
             <Ionicons name="ellipsis-horizontal-circle-outline" size={20} color="black" />
@@ -46,7 +53,7 @@ function DrawerNavigation() {
       />
       <Drawer.Screen
         name="Ekibimiz"
-        component={Home}
+        component={Team}
         options={{
           drawerIcon: () => (
             <Ionicons name="people-circle-outline" size={20} color="black" />
@@ -55,7 +62,7 @@ function DrawerNavigation() {
       />
       <Drawer.Screen
         name="Gezilerimiz"
-        component={Home}
+        component={Travels}
         options={{
           drawerIcon: () => (
             <Ionicons name="car-outline" size={20} color="black" />
@@ -64,7 +71,7 @@ function DrawerNavigation() {
       />
       <Drawer.Screen
         name="Destekçilerimiz"
-        component={Home}
+        component={Support}
         options={{
           drawerIcon: () => (
             <Ionicons name="chevron-forward-circle-outline" size={20} color="black" />
@@ -73,7 +80,7 @@ function DrawerNavigation() {
       />
       <Drawer.Screen
         name="Blog"
-        component={Home}
+        component={Blog}
         options={{
           drawerIcon: () => (
             <Ionicons name="planet-outline" size={20} color="black" />
@@ -82,7 +89,7 @@ function DrawerNavigation() {
       />
       <Drawer.Screen
         name="Kampanyalar"
-        component={Home}
+        component={Camping}
         options={{
           drawerIcon: () => (
             <Ionicons name="flash-outline" size={20} color="black" />

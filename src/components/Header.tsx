@@ -19,10 +19,12 @@ function Header() {
           justifyContent: 'space-between',
           padding: 24,
         }}>
+        <TouchableOpacity onPress={() => navigation.navigate("Ana Sayfa")}>
         <Image
           source={require('../assets/logo.png')}
           style={{width: 75, height: 75, resizeMode: 'contain'}}
-        />
+          />
+        </TouchableOpacity>  
         <Text
           style={{
             color: '#000',

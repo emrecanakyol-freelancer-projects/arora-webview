@@ -17,7 +17,7 @@ import {ToastError} from '../../../utils/ToastMessage';
 
 export default function LoginScreen() {
   const navigation: any = useNavigation();
-  const [email, setEmail] = useState(__DEV__ ? 'test2@gmail.com' : "");
+  const [email, setEmail] = useState(__DEV__ ? 'test3@gmail.com' : "");
   const [password, setPassword] = useState(__DEV__ ? 'test1234' : "");
   const [emailError, setEmailError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -148,7 +148,7 @@ export default function LoginScreen() {
                 />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("ResetPassword")}>
               <Text
                 style={{color: 'gray', textAlign: 'right', marginBottom: 50}}>
                 Şifrenizi mi unuttunuz?
