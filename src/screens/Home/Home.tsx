@@ -57,7 +57,7 @@ const App = () => {
         }>
         <Header />
         <WebView
-          source={{uri: 'https://www.acikrotaturizmrehberleri.com/'}}
+          source={{uri: 'https://www.acikrotaturizmrehberleri.com/ana-sayfa-mobill'}}
           onLoadProgress={event => setCanGoBack(event.nativeEvent.canGoBack)}
           ref={webViewRef}
           originWhitelist={['*']}
